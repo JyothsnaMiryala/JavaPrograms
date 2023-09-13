@@ -1,0 +1,25 @@
+package com.methods;
+
+import java.util.Arrays;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		int[] arr = { 15, 8, 9, 2, 11, 4, 7 };
+		int[] arr1 = reversearray(arr);
+		System.out.println(Arrays.toString(arr1));
+
+	}
+
+	private static int[] reversearray(int[] arr) {
+
+		int temp = 0;
+		for (int i = 0; i < arr.length / 2; i++) {
+			temp = arr[i];
+			arr[i] = arr[arr.length - 1 - i];
+			arr[arr.length - 1 - i] = temp;
+		}
+		return arr;
+	}
+
+}
